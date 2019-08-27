@@ -15,9 +15,7 @@ $(document).ready(function(){
             for (var i = 0; i < cards.length; i++) {
                 if (cards[i].Deck !== deckName) {
                     deckName = cards[i].Deck;
-                    tableContent += '<tr><td><a href="DeckDetail.html" class="selectDeck">' + deckName + '</a></td></tr>';
-
-
+                    tableContent += '<tr><td class="decktd"><div class = "selectDeckCard card card-body  shadow-sm text-center"><a href="DeckDetail.html" class="selectDeck">' + deckName + '</a></div></td></tr>';
                 }
 
             }

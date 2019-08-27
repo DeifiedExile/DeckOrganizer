@@ -1,1 +1,12 @@
 body{background-color: grey;}
+a{
+  font-size: 1em;
+    font-weight: bolder;
+}
+.selectDeckCard{
+    margin: 5px;
+    padding: 0;
+}
+.decktd{
+    padding: 5px;
+}
