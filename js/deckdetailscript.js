@@ -4,6 +4,10 @@ $(document).ready(function(){
         url:"DeckData.csv",
         dataType:"text",
         success:function(data){
+            if("newdeck" in sessionStorage)
+            {
+                data += sessionStorage.getItem("newdeck");
+            }
             var cards = $.csv.toObjects(data);
 
             var tableContent = '<table class="table-dark table-striped">';

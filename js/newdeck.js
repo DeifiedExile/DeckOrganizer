@@ -14,11 +14,19 @@ $(document).ready(function(){
     $('input:submit').on('click', function(e){
 
         var cardcount = 0;
+        var deckcsv = "";
+
+
         $('.cardlistentry').each(function(i,obj){
+            deckcsv += 'Commander,';
+            deckcsv += $('#deckName').val();
+            deckcsv += ',' + parseInt($(this).find('.cardentryqty').val()) + ',' + $(this).find('.cardentryname').val() + '\n';
+
             cardcount += parseInt($(this).find('.cardentryqty').val());
         })
         sessionStorage.setItem('cardcount', cardcount.toString());
-        sessionStorage.setItem('newdeck', $('#deckName').val());
+        sessionStorage.setItem('newdeckname', $('#deckName').val());
+        sessionStorage.setItem('newdeck', deckcsv);
         $('a #decksubmit').click();
 
     });
