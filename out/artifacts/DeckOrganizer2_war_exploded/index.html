@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deck Organizer - Home</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--    <script src="scripts.js"></script>-->
+</head>
+<body class="bodyHome">
+    <div id="divHomeIntro" class="container">
+        <p>Welcome to my Deck Organizer!</p>
+<!--        <a href="DeckList.html" class="btn-lg">click</a>-->
+    </div>
+    <div id="divUploadForm" class="container">
+        <form method="post" action="deckServ" id="formLoadDecks" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="inputCSV">Select a .CSV file to upload existing decks.</label>
+                <input id="inputCSV" type="file" accept=".csv" name="inputCSVParam" class="form-control-file" required>
+                <input type="submit" value="Upload">
+<!--                <a href="DeckList.html" class="btn-lg">click</a>-->
+            </div>
+
+        </form>
+    </div>
+    <div>
+        <a href="DeckList.html" class="btn-lg">click</a>
+    </div>
+
+</body>
+</html>
