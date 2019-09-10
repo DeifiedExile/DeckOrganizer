@@ -95,7 +95,7 @@ $(document).ready(function(){
     });
 
     //confirmation script
-   
+
     $('#confirmdiv').html('New deck \"'+sessionStorage.getItem('newdeckname') + '\" created successfully with ' + sessionStorage.getItem('cardcount') + ' cards added.');
 
 });

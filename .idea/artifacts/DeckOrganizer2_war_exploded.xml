@@ -7,6 +7,14 @@
         <element id="directory" name="classes">
           <element id="module-output" name="DeckOrganizer" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/derby.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/derbyshared.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/derbytools.jar" />
+          <element id="directory" name="deckdb">
+            <element id="dir-copy" path="$PROJECT_DIR$/lib/deckdb" />
+          </element>
+        </element>
       </element>
     </root>
   </artifact>
