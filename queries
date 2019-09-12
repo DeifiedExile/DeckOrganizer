@@ -1,0 +1,3 @@
+select * from decks
+join deck_card on decks.deck_id = deck_card.deck_id
+join cards on deck_card.card_id = cards.card_id
