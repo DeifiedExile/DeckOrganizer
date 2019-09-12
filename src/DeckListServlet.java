@@ -68,7 +68,7 @@ public class DeckListServlet extends HttpServlet {
                     "</body>\n" +
                     "</html>");
 
-            //response.getWriter().print(output.toString());
+            response.getWriter().print(output.toString());
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -77,8 +77,9 @@ public class DeckListServlet extends HttpServlet {
 
         }
 
-        request.setAttribute("deckList", output.toString());
-        request.getRequestDispatcher("Decks.jsp").forward(request, response);
+//        request.setAttribute("deckList", output.toString());
+//        response.getWriter().print(output.toString());
+        //request.getRequestDispatcher("jsp/Decks.jsp").forward(request, response);
 
 
 
