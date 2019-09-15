@@ -1,7 +1,4 @@
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DatabaseUtils {
 
@@ -32,6 +29,17 @@ public class DatabaseUtils {
                 e.printStackTrace();
             }
         }
+    }
+    public static void closePstmt(PreparedStatement pstmt)
+    {
+        if (pstmt != null) {
+            try {
+                pstmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }
 
