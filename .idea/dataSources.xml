@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Apache Derby (Embedded) - deckdb" uuid="6a7a30c1-34d6-4b49-bad3-666867c1124c">
       <driver-ref>derby.embedded</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.apache.derby.iapi.jdbc.AutoloadedDriver</jdbc-driver>
+      <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
       <jdbc-url>jdbc:derby:$PROJECT_DIR$/lib/deckdb</jdbc-url>
     </data-source>
   </component>
