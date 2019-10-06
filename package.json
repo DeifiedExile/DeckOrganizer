@@ -1,0 +1,8 @@
+{
+  "name": "DeckOrganizer",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "mtgsdk": "^0.4.3"
+  }
+}

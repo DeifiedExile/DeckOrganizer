@@ -57,7 +57,7 @@ public class DeckDetailServlet extends HttpServlet {
 
         session.setAttribute("cardList", output);
 
-        request.getRequestDispatcher("jsp/Detail.jsp").forward(request, response);
+        request.getRequestDispatcher("Detail.jsp").forward(request, response);
 
     }
 }

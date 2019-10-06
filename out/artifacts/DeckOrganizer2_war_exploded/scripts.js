@@ -1,9 +1,23 @@
 $(document).ready(function(){
 
-        $(document).on('mousedown', '.selectDeck', function(e){
-            sessionStorage.setItem('deckName', $(this).innerHTML);
-            console.log($(this).innerHTML);
-        });
+
+
+
+    $('#navSearchSubmit').on('click', function(e){
+        if(!$('#navSearchText').val.length > 0){
+            e.preventDefault();
+            e.stopPropagation();
+            $('#searchCollapse').collapse('show');
+            $('#navSearchText').css('border', 'red');
+
+
+        }
+    })
+
+    $(document).on('mousedown', '.selectDeck', function(e){
+        sessionStorage.setItem('deckName', $(this).innerHTML);
+        console.log($(this).innerHTML);
+    });
 
         //add new card entry form line
     $(document).on('click', '#addcard', function(e){
@@ -48,7 +62,17 @@ $(document).ready(function(){
 
     $('#confirmdiv').html('New deck \"'+sessionStorage.getItem('newdeckname') + '\" created successfully with ' + sessionStorage.getItem('cardcount') + ' cards added.');
 
+    // //card api call
+    // var mtg = require('mtgsdk')
+    //
+    // mtg.card.where({name: '"Archangel Avacyn"'})
+    //     .then(results => {
+    //     console.log(results)
+    // })
+
 });
+
+
 
 
 

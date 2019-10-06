@@ -54,7 +54,7 @@ public class DeckListServlet extends HttpServlet {
         session.setAttribute("deckList", output);
         System.out.println(session.getId());
 
-        request.getRequestDispatcher("jsp/Decks.jsp").forward(request, response);
+        request.getRequestDispatcher("Decks.jsp").forward(request, response);
 
 
 

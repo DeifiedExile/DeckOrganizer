@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="controller?page=index"><i>Deck Organizer</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="dropdown-item" href="listDecks">Deck List</a>
+            </li>
+            <li class="nav-item dropdown" id="searchCollapse">
+                <form method="get" action="search">
+
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" value="Deck Search">Deck Search</button>
+
+                    </button>
+                    <div class="dropdown-menu">
+                        <input type="text" id="navSearchText" name="searchTerm" required/>
+                        <input type="submit" value="Search" id="navSearchSubmit" class="btn btn-secondary" />
+                    </div>
+                </form>
+            </li>
+            <li class="nav-item">
+                <a class="dropdown-item" href="controller?page=login">Log In</a>
+            </li>
+            <li class="nav-item">
+                <a class="dropdown-item" href="controller?page=signup">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="dropdown-item" href="controller?page=about">About</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
