@@ -8,14 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="WEB-INF/resources/css/bootstrap.css">
     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="WEB-INF/resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="WEB-INF/resources/css/styles.css">
+    <link rel="shortcut icon" href="/WEB-INF/resources/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/WEB-INF/resources/img/favicon.ico" type="image/x-icon">
+    <script src="WEB-INF/resources/js/scripts.js"></script>
     <title>About</title>
 </head>
 <body>

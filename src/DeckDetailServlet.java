@@ -41,12 +41,10 @@ public class DeckDetailServlet extends HttpServlet {
             output.append("<tr><th>Card Name</th><th>Quantity</th></tr>");
             while(rset.next())
             {
-
                 output.append("<tr><td>");
                 output.append(rset.getString(1) + "</td><td>"+rset.getString(2)+"</td></tr>");
             }
             output.append("</table>");
-
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
