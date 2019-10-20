@@ -23,6 +23,7 @@ public class DeckDetailServlet extends HttpServlet {
         StringBuilder output = new StringBuilder();
 
 
+
         try {
             //load derby driver
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
@@ -55,7 +56,7 @@ public class DeckDetailServlet extends HttpServlet {
 
         session.setAttribute("cardList", output);
 
-        request.getRequestDispatcher("Detail.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/view/Detail.jsp").forward(request, response);
 
     }
 }

@@ -11,7 +11,7 @@
 <head>
     <title>DeckOrganizer - DeckList</title>
     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="resources/css/bootstrap.css">
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/styles.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="resources/js/scripts.js"></script>

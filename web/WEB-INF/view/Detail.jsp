@@ -15,30 +15,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="resources/js/scripts.js"></script>
 
-<%--    <script src="https://api.scryfall.com"></script>--%>
+
     <title></title>
 </head>
 <body>
     <%@ include file="/nav.html" %>
-<%--    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">--%>
-<%--        <a class="navbar-brand" href="index.html"><i>Deck Organizer</i></a>--%>
-<%--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">--%>
-<%--            <span class="navbar-toggler-icon"></span>--%>
-<%--        </button>--%>
-<%--        <div class="collapse navbar-collapse" id="navbarSupportedContent">--%>
-<%--            <ul class="navbar-nav mr-auto">--%>
-<%--                <li class="nav-item dropdown">--%>
-<%--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">--%>
-<%--                        Menu--%>
-<%--                    </a>--%>
-<%--                    <div class="dropdown-menu">--%>
-<%--                        <a class="dropdown-item" href="listDecks">Deck List</a>--%>
-<%--                        <a class="dropdown-item" href="search">Deck Search</a>--%>
-<%--                    </div>--%>
-<%--                </li>--%>
-<%--            </ul>--%>
-<%--        </div>--%>
-<%--    </nav>--%>
+
     <div class="container">
         ${cardList}
     </div>
