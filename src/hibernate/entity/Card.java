@@ -25,9 +25,13 @@ public class Card {
     private  String name;
 
     @OneToMany(
+            fetch = FetchType.LAZY,
             mappedBy = "card",
             cascade = CascadeType.ALL
+
     ) //need cascade all so that if it is deleted, it removes related entries from bridge table
+    //one to many because bridge table has additional info
+    //lazy because i dont need every deck each time i check this card
     private List<DeckCard> decks = new ArrayList<>();
 
     public Card() {

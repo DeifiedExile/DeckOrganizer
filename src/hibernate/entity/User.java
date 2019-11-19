@@ -18,7 +18,9 @@ public class User {
     @Column(name = "user_name")
     private String username;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    //cascade all so that if a user is deleted, their decks are also deleted
+    //eager because i'll need the decks associated with the user
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Deck> decks;
 
     public User() {

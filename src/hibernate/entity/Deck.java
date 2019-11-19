@@ -30,19 +30,16 @@ public class Deck {
     @Column(name = "format")
     private String format;
 
-//    @ManyToMany(cascade = {
-//            CascadeType.DETACH,
-//            CascadeType.MERGE,
-//            CascadeType.PERSIST,
-//            CascadeType.REFRESH
-//    })
-//    @JoinTable(name = "deck_card",
-//    joinColumns = @JoinColumn(name = "deck_id"),
-//    inverseJoinColumns = @JoinColumn(name = "card_id"))
-//    private List<Card> cards;
 
-    @OneToMany(mappedBy = "deck",
+
+
+    //need cascade all so that if it is deleted, it removes related entries from bridge table
+    //one to many because bridge table has additional info
+    //eager because i'll need all the cards associated with the deck
+    @OneToMany(fetch = FetchType.EAGER,
+            mappedBy = "deck",
     cascade = CascadeType.ALL)
+
     private List<DeckCard> cards = new ArrayList<DeckCard>();
 
     public Deck() {
