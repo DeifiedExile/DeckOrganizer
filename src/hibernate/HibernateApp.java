@@ -5,6 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 
@@ -68,6 +70,23 @@ public class HibernateApp {
         //TODO: CRUD
 
         session.getTransaction().commit();
+    }
+    private void getdecks()
+    {
+        Session session = factory.getCurrentSession();
+
+        session.beginTransaction();
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Deck> criteria = builder.createQuery(Deck.class);
+        criteria.from(Deck.class);
+
+        List<Deck> deckList = session.createQuery(criteria).getResultList();
+
+        deckList.forEach(d -> System.out.println(d.getName()));
+
+        session.getTransaction().commit();
+
     }
 
     //User Crud

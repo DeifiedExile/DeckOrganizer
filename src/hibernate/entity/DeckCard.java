@@ -16,10 +16,12 @@ public class DeckCard {
     //Took me a while to get this to work at all
     //Lazy because its only needed when specifically called for upon creation
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="deck_Id")
     @MapsId("deckId")
     private Deck deck;
     //Lazy because its only needed when specifically called for upon creation
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="card_Id")
     @MapsId("cardId")
     private Card card;
 

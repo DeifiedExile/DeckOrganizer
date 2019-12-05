@@ -16,8 +16,12 @@
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
-        <naming-strategy-map />
+        <datasource-map>
+          <unit-entry name="mySessionFactory" value="6a7a30c1-34d6-4b49-bad3-666867c1124c" />
+        </datasource-map>
+        <naming-strategy-map>
+          <unit-entry name="mySessionFactory" />
+        </naming-strategy-map>
       </configuration>
     </facet>
   </component>
@@ -98,5 +102,9 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Hibernate 5.4.5-5.4.5" level="project" />
+    <orderEntry type="library" name="com.mchange:c3p0:0.9.5.4" level="project" />
+    <orderEntry type="library" name="org.hibernate.validator:hibernate-validator:6.1.0.Final" level="project" />
+    <orderEntry type="library" name="jstl:jstl:1.2" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.10.1" level="project" />
   </component>
 </module>

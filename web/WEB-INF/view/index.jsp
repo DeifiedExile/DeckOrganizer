@@ -21,7 +21,7 @@
   </div>
 
   <div>
-    <form method="get" action="listDecks">
+    <form method="get" action="/deck/list">
       <input type="submit" value="Deck List"/>
     </form>
 

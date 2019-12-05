@@ -59,7 +59,7 @@ public class DeckSearchServlet extends HttpServlet {
 
         //session.setAttribute("cardList", output);
 
-        request.getRequestDispatcher("Decks.jsp").forward(request, response);
+        request.getRequestDispatcher("list-decks.jsp").forward(request, response);
 
     }
 }

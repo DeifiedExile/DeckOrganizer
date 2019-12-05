@@ -4,12 +4,43 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="card.properties"/>
+<!--    <context:property-placeholder location="card.properties"/>-->
 
-    <bean id="ImageService" class="springxml.services.LargeImgService"/>
+<!--    <bean id="ImageService" class="springxml.services.LargeImgService"/>-->
 
-    <bean id="myCard" class="springxml.beans.Card">
-        <property name="imgService" ref="ImageService"/>
-        <property name="cardName" value="${c.cardName}"/>
+<!--    <bean id="myCard" class="springxml.beans.Card">-->
+<!--        <property name="imgService" ref="ImageService"/>-->
+<!--        <property name="cardName" value="${c.cardName}"/>-->
+<!--    </bean>-->
+
+    <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+
+        <property name="jdbcUrl" value="jdbc:derby:#{ servletContext.getRealPath('/') }/../../../lib/deckdb"/>
+
+        <property name="user" value="wolf"/>
+        <property name="password" value="wolf"/>
+
+        <property name="initialPoolSize" value="5"/>
+        <property name="minPoolSize" value="5"/>
+        <property name="maxPoolSize" value="20"/>
+        <property name="maxIdleTime" value="30000"/>
     </bean>
+
+    <bean id="mySessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="packagesToScan" value="hibernate"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="myTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="mySessionFactory"/>
+    </bean>
+
+
 </beans>
